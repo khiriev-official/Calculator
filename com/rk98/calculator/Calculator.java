@@ -17,14 +17,16 @@ these operations.
 ...
 N.
  */
-package com.rk98.calculator.calcImpl;
+package com.rk98.calculator;
 
+
+import com.rk98.calculator.gui.CalculatorGUI;
 
 import java.util.Scanner;
-// import com.rk98.calculator.calcImp.*; - this classes in the same package so they are linked to one another!
 
 
 public class Calculator {
+
 
 	public Calculator() {  // Perform operations without creating objects
 		double result = 0;
@@ -34,12 +36,6 @@ public class Calculator {
 		double num2 = scan.nextDouble();
 		String operation = scan.next();
 
-		/*
-		System.out.println("Num1      -> " + num1);
-		System.out.println("Num2      -> " + num2);
-		System.out.println("Operation -> " + operation);
-		*/
-
 		if (operation.equals("+")) result = num1 + num2;
 		if (operation.equals("-")) result = num1 - num2;
 		if (operation.equals("*")) result = num1 * num2;
@@ -48,18 +44,12 @@ public class Calculator {
 		System.out.println("Result: " + result);
 	}
 
-/*
-	public Calculator(double a, double b, String op) {
-		System.out.println("Hello!\n");
-	}
-*/
-
 
 	public static void main(String[] args){
 		//Calculator calc = new Calculator();
 		double result = Calculator.calculate(7, 3, "/");
 		System.out.println(result);
-		calcgui g = new calcgui();
+		CalculatorGUI g = new CalculatorGUI();
 	}
 
 
@@ -85,22 +75,5 @@ public class Calculator {
 
 		return result;
 	}
-	/*
-	public double add(double a, double b){
-		return a + b;
-	}
-
-	public double subtr(double a, double b){
-		return a - b;
-	}
-
-	public double mult(double a, double b){
-		return a * b;
-	}
-
-	public double divi(double a, double b){
-		return a / b;
-	}
-	*/
 }
 
